@@ -3,20 +3,38 @@
 :root {
   box-sizing: border-box;
   font-family: 'Roboto', system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --light-blue: 25,146,212;
 }
 
 body {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-columns: minmax(auto, 400px) 4fr;
+  grid-template-rows: minmax(auto, 200px) 4fr;
+}
+
+button[type='button'] {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .side-panel {
-  border: solid 2px red;
+  background-color: rgb(var(--light-blue));
+  font-weight: bold;
   grid-row: 1 / 3;
   grid-column: 1 / 2;
   display: grid;
   grid-template-rows: auto auto 1fr;
+}
+
+.side-panel img {
+  filter: invert(1);
+}
+
+.side-panel a{
+  text-decoration: none;
+  color: white;
 }
 
 .side-panel > div {
@@ -24,10 +42,12 @@ body {
 }
 
 .dashboard-logo {
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
-  padding-left: 1.5rem;
+  padding: 0 1.5rem 0 1.5rem;
   gap: 1rem;
+  color: white;
 }
 
 ul {
@@ -37,7 +57,9 @@ ul {
 ul > li {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.4rem;
+  font-size: 1.3rem;
+  line-height: 10px;
 }
 
 .header {
