@@ -65,7 +65,7 @@ ul > li {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: minmax(500px, 1.5fr) minmax(440px, 1fr);
   grid-template-rows: repeat(2, 1fr);
   box-shadow: 3px 1px 9px gray;
   position: relative;
